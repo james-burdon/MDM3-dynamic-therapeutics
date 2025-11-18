@@ -1,0 +1,35 @@
+Qs for Thomas:
+What is the motivation/what are you looking to get out of this research?
+How much data do you have and in what format is it in?
+From your initial understanding, what is the relationship between posture and hormone levels?
+What wearables can we borrow?
+What other health metrics should we look into? If any? Heart rate, heart rate variability, body temperature
+How many classifications of hormones and postures?
+What other features do we need to consider? Age/Gender/BMI
+
+TA: Adam Morris
+Data - what's available, format, labels
+
+Hypothesis: predict hormone data off posture
+Predict hormone - regression problem
+Classify posture from hormones? Rather than predicting hormone levels - predict the change of hormone level 
+Hormone changes based on postures and activity 
+
+*What is the motivation/most useful to them? - What is the success metric - WHAT IS THEIR PRIORITY (get a list) TO GET OUT OF THIS REPORT?*
+
+MDS UPDRS - measure of different activities, and received an aggregate score. Limitations: different activities I,.e. walking and touching fingers, some may score well and some may perform badly but receive the same score, additioanlly, done in a clinic - patients have more stress levels and perform poorly
+Part 3) Motor symptoms - related to posture
+Therefore, this project, in their home - accelerometer, barometer, gyrometer - what sensors are used? Are there pretrained models for these sensors?
+
+Sphere project - posture detection, sit to stand (change in posture) - all you need to track is your head, sphere challenge - detecting activity
+Provisional labels
+
+If we have a 20 minute label - where are we taking our prediction, at the end? In the middle? Is the posture 5 seconds before or 
+
+To do:
+Sphere papers
+Postrue deteciton papers from videos/wearables 
+Ask: What wearables are the patients using
+Mobilised - D, have simple model used to classify the gate i..e walking, running, sitting
+
+

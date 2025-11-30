@@ -1,0 +1,20 @@
+Qs for Thomas:
+Q: What is the motivation/what are you looking to get out of this research?
+A: Data and signals in context - map variation of hormones to activity. Not using lab constrained conditions, look at  variability. Interested: time from lying to getting up - observation of physical motion. Cortisol already rising before we wake up, is it rising extremely as we stand up or is it just the waking up
+
+Q:How much data do you have and in what format is it in?
+A:10-15 people, 24 hours. 1 channel ECG: x,y,z initially at 100Hz but interpolated 250Hz - consistent standard format. Hormone data, csv with time stamps
+
+Q:From your initial understanding, what is the relationship between posture and hormone levels?
+A:Broad level: melatonin/cortisol - not affected. Adrenaline, regulate HR and blood pressure, extremely related to posture. Look into what will change regardless 
+
+Q:What wearables can we borrow?
+A:ECG gadgets and maybe a watch
+
+Q:What other health metrics should we look into? If any? Heart rate, heart rate variability, body temperature?
+A:We can pull out HR and HRV from the ECG - we can show that to confirm that a period is sleep for example and the relationship with posture
+Q:How many classifications of hormones and postures?
+A:Circadian (cortisol and melatonin) and non-circadian. Postures: standing, sitting, lying
+
+Q:What other features do we need to consider? Age/Gender/BMI
+A:More related for further research rather than something to consider for this analysis

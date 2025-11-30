@@ -1,0 +1,23 @@
+Controlled experiment for extracting the data
+
+How are we going to define our question? Understand whether posture is directly affecting hormone trends
+-Take accelerometer data
+-Use that to predict at any point in time what their posture is within that time series
+-Take time series of hormones, and find what's causing that - correlate time series of activity and hormones
+-Is the hormones changes directly impacted by activity?
+-Are they cyclic or are they related to a specific activity/posture change
+-Can we correlate hormone changes to changes in posture
+Comparison:
+-Activity spike vs hormone spike
+-Looking at sub trends - is there a relationship or between high activity and spiking? 
+
+Data advice
+Make hormone data is a higher resolution
+Filter data: take a slice, 1/2 a second rather than 250Hz, match this to activity log, extrapolate data - by assuming the posture is the same until any new label
+
+Models to use:
+-Time series analysis
+-Correlation analysis
+-Random forest
+
+

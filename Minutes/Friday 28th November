@@ -1,0 +1,16 @@
+Look through data
+Find metrics and labels
+Train model
+Colmpute F1 score and confusion matrices
+Split data in training, validating and test
+
+
+Use labels, but predict posture based solely off  x,y,z data
+Need posture data… start looking at alternative data - sphere.
+Start by using ECG data to validate our model as this is expected (we know how heart rate should vary)
+Then look at hormones such as glucose
+Which hormones follow similar trends to posture?
+Stick to posture prediction - use hormone data only for analysis
+
+
+

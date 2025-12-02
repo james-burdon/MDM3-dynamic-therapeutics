@@ -1,0 +1,12 @@
+Dataset: https://physionet.org/content/mmash/1.0.0/
+GitHub: https://github.com/RossiAlessio/MMASH
+In citeful page: https://inciteful.xyz/p/W4322625607 
+
+Advice:
+We can map label -> accelerometer, accelerometer -> hormone
+Ensure the datasets use the same wearables
+
+Actions:
+Everyone read at least one paper
+Everyone familiarise yourself with GitHub/Dataset
+

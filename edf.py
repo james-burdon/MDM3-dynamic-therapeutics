@@ -7,4 +7,7 @@ raw = mne.io.read_raw_edf(r"C:\Users\jburd\Desktop\MDM3-dynamic-therapeutics\09-
 print(raw.info)
 
 # Plot first 10 channels over 10 seconds
-raw.plot(duration=10, n_channels=10, show=True)
+raw.plot(duration=10, n_channels=10, show=True, scalings='auto')
+
+
+# select the code above and shift+enter

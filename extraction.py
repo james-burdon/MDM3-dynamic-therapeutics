@@ -1,5 +1,6 @@
 import pandas as pd
 import matplotlib.pyplot as plt
+import sklearn
 
 df = pd.read_csv("wearable_acceleration_extract_0900_0.csv", sep="\t")
 # print(df)

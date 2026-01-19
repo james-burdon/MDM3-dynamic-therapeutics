@@ -116,3 +116,36 @@ scores = cross_val_score(rf, X_train, y_train, cv=gkf, groups=groups_train)
 
 print("Cross-Validation Scores:", scores)
 print("Mean Accuracy,", scores.mean())
+
+'''
+Tuning hyperparameters
+Commented out because it takes ages to run
+'''
+
+# Hyperparameter tuning
+#param_grid = {
+#    'n_estimators' : [200, 300],
+ #   'max_depth' : [20, 30],
+ #   'min_samples_split' : [2, 5],
+#    'min_samples_leaf' : [1, 2],
+#}
+
+#grid_search = GridSearchCV(RandomForestClassifier(), param_grid=param_grid, cv=3)
+#grid_search.fit(X_train, y_train)
+
+#print("Best Parameters:", grid_search.best_params_)
+#print("Best Estimator:", grid_search.best_estimator_)
+
+#tuned_rf =  RandomForestClassifier(n_estimators=300,  max_features="log2", max_depth=20, min_samples_leaf=2, min_samples_split=5)
+
+#tuned_rf.fit(X_train, y_train)
+# Predictions
+#y_pred = tuned_rf.predict(X_test)
+
+#accuracy = accuracy_score(y_test, y_pred)
+#print(f"Accuracy: {accuracy:.2f}")
+
+# Confusion matrix
+#cm = confusion_matrix(y_test, y_pred)
+#ConfusionMatrixDisplay(confusion_matrix=cm).plot()
+#plt.show()

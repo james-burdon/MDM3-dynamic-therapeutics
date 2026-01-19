@@ -1,5 +1,6 @@
 import pandas as pd
 import matplotlib.pyplot as plt
+import sklearn
 
 df = pd.read_csv("wearable_acceleration_extract_0900_0.csv", sep="\t")
 # print(df)
@@ -40,7 +41,7 @@ def activities(label=("low_cupboard","high_cupboard"),dataset=df):
     dataset_low["z"] = dataset_low["z"].astype(float)
     
     axis=["x","y","z"]
-    fig,axes=plt.subplots(3,1,figsize=(16,10))
+    fig,axes=plt.subplots(3,1,figsize=(14,8))
     for ax, dim in zip(axes,axis):
         ax.plot(dataset_low["ts"],dataset_low[dim],label=f"{dim} acceleration")
         ax.set_xlabel("Time in time stamps")

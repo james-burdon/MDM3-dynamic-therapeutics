@@ -115,6 +115,7 @@ gkf = GroupKFold(n_splits=3)
 scores = cross_val_score(rf, X_train, y_train, cv=gkf, groups=groups_train)
 
 print("Cross-Validation Scores:", scores)
+
 print("Mean Accuracy,", scores.mean())
 
 '''

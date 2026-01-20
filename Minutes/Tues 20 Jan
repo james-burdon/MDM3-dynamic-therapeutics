@@ -1,0 +1,18 @@
+Discussion:
+Build up predicter model based off other features/metrics - can we predict cortisol levels?
+What other metrics can we come up with using the given data that we can use to make predictions on hormone levels?
+Can we predict the change (how big) in cortisol between beginning and end of day based off metrics i..e stress, activity, HR
+Another predictor - ignore metrics - based off activity log/what did they say they did (self reported) - can we predict hormones ?
+What is the best predictor?
+Look into nonlinear and linear models
+
+Yani advice:
+Start with simplest model and aim to improve
+Can we find data with more hormones?
+
+Tasks to do:
+Base-level: Self reported activity -> change in cortisol level (James)
+Questionnaire -> changes in cortisol level (Callum)
+Sleep -> changes in cortisol level (Zhou)
+Actigraphy -> changes in cortisol level (Emma)
+Research metrics and previous experiment to find which metrics should be the most useful for the model (Liv)

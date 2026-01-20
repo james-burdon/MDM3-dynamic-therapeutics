@@ -1,0 +1,15 @@
+Current situation:
+-> Working model to ~70% accuracy of accelerometer + HR data -> posture. Works 80%+ for sitting and standing and low for lying
+-> Model created for accelarometer -> activity
+
+Ideas going forward:
+-> Remove lying down data, how does this improve correlation matrix? (Emma)
+-> Send email to Thomas regarding if we can get more data and wearables (Liv - done in meeting)
+-> Look into removing activities for posture -> activity model (James)
+-> THE BIG Q: How do we want to construct our model's architecture? Are we going hormone -> HR+accel -> Posture OR HR -> Hormones
+
+RESEARCH
+-> Suggested order: Accelerometer -> Activity (include HR + hormone) -> predict posture but investigate if this is the most appropriate (Liv + Zhou)
+-> Research other metrics which are related to hormones (Liv + Zhou)
+-> Try and find alternative data source for hormones and HR (Liv + Zhou)
+-> Research EDF data (Callum) 

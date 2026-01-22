@@ -1,0 +1,28 @@
+Heart Rate Variability and Cortisol
+
+Research Paper: https://pmc.ncbi.nlm.nih.gov/articles/PMC5967249/#S10
+
+Background:
+HRV - fluctuation in time between heart beats
+What does HRV tell us? Indication of body's adaptability and autonomic nervous system balance. We have two nervous systems: parasympathetic (rest/digest) and sympathetic (fight or flight).
+High HRV -> fitness and resilience
+Low HRV -> stress/fatigue, suggests potential health issues
+Cortisol - body's main stress hormone
+Calculate HRV using RMSSD (root mean square of successive differences) - standard statistical measurement 
+RMSSD characterises short term rapid changes in HR  and is strongly correlated to parasympathetic activity and is widely used in wearable-based research
+https://welltory.com/rmssd-and-other-hrv-measurements/
+
+Experiment Details:
+Participants underwent laboratory stress task with stages:
+Baseline -> Anticipation (prep for stress task 10 mins) -> Stress task -> Recovery 
+HRV was monitored throughout the experiment and 7 salivary cortisol samples were taken immediately before the task, after and 5 more times subsequently in 10 min intervals
+
+Findings:
+Participants who had a larger decrease in HRV during anticipation had higher increases of cortisol in response to the stress task
+HRV changes during the stress task were not strongly correlated with cortisol response 
+Therefore, HRV appears to reflect an individual’s underlying capacity for stress regulation, rather than immediate responses during the stressor itself.
+
+Takeaways:
+Cortisol influences HRV through it's effect on the autonomic nervous system indirectly. Cortisol increases sympathetic activity and decreases parasympathetic influence which ultimately lowers HRV (RMSSD)
+Therefore, can say that HRV reflects stress-related autonomic nervous system activity which is driven by hormones such as cortisol. Therefore we can interpret HRV to give us indirect insight into stress hormone activity.
+For our report, we hypothesise that participants with lower HRV levels may exhibit larger cortisol responses.

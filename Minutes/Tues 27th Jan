@@ -1,0 +1,14 @@
+Action list: 
+
+Data processing of EDF file (Emma)
+Timestamps -> EDF & See if EDF data correlates to activity data  (Emma)
+Use accelerometer data to predict posture/activity label (Emma)
+
+Categorise the activity data to different postures/activities/labels  (Liv)
+Classifier for activity labels -> Hormones (James)
+
+Other metrics we have access to - see what timestamps match up to different data and what correlates with the activity labels. (Callum and Zhou and Liv once labels + EDF complete)
+Glucose (Callum)
+Oura (Callum)
+Blood pressure (Zhou)
+Any others (EDF) (Liv + Zhou)

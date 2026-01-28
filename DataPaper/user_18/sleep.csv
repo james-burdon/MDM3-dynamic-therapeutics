@@ -1,2 +1,3 @@
-,In Bed Date,In Bed Time,Out Bed Date,Out Bed Time,Onset Date,Onset Time,Latency,Efficiency,Total Minutes in Bed,Total Sleep Time (TST),Wake After Sleep Onset (WASO),Number of Awakenings,Average Awakening Length,Movement Index,Fragmentation Index,Sleep Fragmentation Index
-0,2,00:55,2,06:53,2,00:58,3,84.36,358,302,53,9,5.89,16.48,20,36.48
+version https://git-lfs.github.com/spec/v1
+oid sha256:c9321365ab49588e844e6f348393e19d7ed779f5bfce5554897d566f16d2a136
+size 340

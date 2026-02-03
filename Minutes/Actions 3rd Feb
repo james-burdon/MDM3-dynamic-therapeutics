@@ -1,0 +1,19 @@
+Next actions:
+
+Technical content (due 04/02)
+-> Stat analysis on accelerometer data (Liv)
+-> Stat analysis on glucose data (Callum)
+-> Stat analysis on hormone data ? (Callum)
+-> Hormone -> inactive/active with the correct dataset (Zhou)
+-> HRV/Accel -> inactive/active with logistic regression (Emma)
+-> Include HRV in accel random forest (Emma)
+
+Write up - first draft (due 06/02)
+-> Intro (Callum/Liv)
+-> Metrics: ECG/HRV (Liv), Accel (Emma), Glucose (Callum), Hormones (Zhou), Activity (James)
+-> Data processing: EDF-> CSV (Emma), classify activities (Liv), Glucose (Callum), Hormones (Zhou)
+-> Stat Analysis: ECG (Liv), HRV (Liv), Accelerometer (Liv), Glucose (Callum), Hormones (Callum)
+Notes/literature rev/research for predictive models (James, Zhou, Emma)
+
+
+

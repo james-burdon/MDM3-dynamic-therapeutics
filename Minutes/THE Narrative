@@ -1,0 +1,61 @@
+Report structure
+
+Abstract 
+
+Introduction
+
+Data Exploration
+Metrics structure: introduce the metric, what is it? Units of measurement? How is it measured? Physiological explanation (brief)
+	1. ECG/HRV (Liv)
+	2. Accelerometer (Emma)
+	3. Glucose (Callum)
+	4. Hormones (Zhou)
+	5. Activity (James)
+
+Data Preprocessing
+Introduction of the datasets that we used.
+Structure: How did we use it? How did we clean it? State any limitations/assumptions with general dataset here.
+	1. EDF -> CSV (Emma)
+	2. Classifying activities (Liv)
+	3. Glucose (Callum)
+	4. Hormones (Zhou)
+
+Statistical Analysis
+Question answering here: which metrics show correlation to posture? How does this motivate us to include/not include this in our models? Using kruskal wallis/ post-hoc metrics. 
+	1. ECG
+	2. HRV
+	3. Accelerometer
+	4. Glucose
+	5. Hormones ? 
+Use this to hypothesize how the model will perform with various metrics. How related is this physiologically?
+
+Predictive Models
+Structure notes: begin with a simple model (logistic regression, inactive vs active) -> complex model (random forest/XG Boost, 4 labels)
+Reason the decisions your making, explain clearly hyper parameter tuning (and why)
+State limitations example including: why we have gone with only 4 labels (this only needs to be explained once)
+	1. HRV/Accel -> inactive vs active (logistic regression) (Emma)
+	2. HRV/Accel -> Posture labels (random forest) (Emma)
+	3. Hormone -> inactive vs active (logistic regression) (Zhou)
+	4. Hormone -> posture labels (random forest/XG boost) (James)
+
+Results
+*MASSIVE RESULTS TABLE WITH EVERYTHING*
+Comments on the results/how does this compare to our initial hypothesis? Which model(s) performed the best?
+
+Discussion and Conclusion (we can discuss how we want to split this up)
+Biggest one: physiologically, does this make sense? 
+Evaluation of our own models, what were the limitations? Use literature to back up the results that we have.
+Did we expect x model to perform the best?
+Conclusion: which one worked best? Why can we justify this?
+
+Evaluation
+Different hormones showing different results (James)
+Others….
+
+Further Research
+Other research that was completed that tells us interesting information:
+	1. How glucose interacts/used alternatively (Callum)
+	2. How HRV might be better to predict acitivty intensity (Liv)
+	3. I'm sure there are plenty of others…
+
+

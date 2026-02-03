@@ -1,0 +1,28 @@
+Introduction
+Motivation
+
+Data Preparation
+-> All data sets used (explanation of each, what do they contain, what do the individual metrics mean)
+-> All data that we cleaned and how it was cleaned (what was ignored and justification)
+
+
+
+Exploratory Data Analysis
+-> Looking for correlations between data sets (this is the motivation for predicting posture)
+-> How does this lead to a hypothesis of which metrics we expect to accurately predict posture?
+-> Use literature to explain why we believe these hypotheses.
+-> Explain limitations before leading onto prediction metrics
+
+
+Posture prediction metrics
+-> Why did we use random forest
+-> Models predicting posture (subsection for each, lead on from the exploratory data analysis)
+-> Hyperparameter tuning
+
+Results and Discussion
+-> One big results table? Show all the different models, all the accuracies
+-> Discussion, how can we use literature to validate conclusions, what were the conclusions using other datasets and how does that compare to the results that we have
+
+Evaluation
+
+Further research

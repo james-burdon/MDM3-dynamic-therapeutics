@@ -39,7 +39,7 @@ for col in ["Accelerometer_X", "Accelerometer_Y", "Accelerometer_Z", "HRV"]:
 data = data.dropna(subset=["user", "Accelerometer_X", "Accelerometer_Y", "Accelerometer_Z", "HRV"])
 data["user"] = data["user"].astype(int)
 
-# Remove moderate_activity (as in your friend's script)
+# Remove moderate_activity 
 data = data[data["activity_label"] != "moderate_activity"].copy()
 
 # Map labels to consistent names

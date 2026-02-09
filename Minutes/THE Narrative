@@ -48,9 +48,12 @@ Evaluation of our own models, what were the limitations? Use literature to back 
 Did we expect x model to perform the best?
 Conclusion: which one worked best? Why can we justify this?
 
-Evaluation
+Evaluation/Study Limitations
 Different hormones showing different results (James)
-Others….
+Activity data - no females in the study, some participants were more engaged with recording their activity levels
+Some CATs are invalid for the hormone data (only 4 valid hormone recorders)
+Not all participants had both activity and EDF data.
+There were lots of NaNs when merging the activity dataset with the EDF csv due to large time periods where activity was not recorded.
 
 Further Research
 Other research that was completed that tells us interesting information:

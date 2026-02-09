@@ -11,7 +11,10 @@ from sklearn.model_selection import GridSearchCV
 from sklearn.model_selection import cross_val_score, StratifiedGroupKFold, GroupShuffleSplit
 from sklearn.metrics import classification_report
 import statistics
-from sklearn.metrics import classification_report
+from imblearn.over_sampling import RandomOverSampler
+from collections import Counter
+from imblearn.under_sampling import RandomUnderSampler
+from sklearn.preprocessing import LabelEncoder 
 
 
 # Window data so the models predictors are features of accelerometer data rather than raw values
@@ -36,13 +39,15 @@ def create_windows(df, window_size, step_size):
             # Fraction of window matching center label
             purity = np.mean(labels_in_window == center_label)
 
-          #  if purity < 0.6:
-                #continue         
+            if purity < 0.6:
+                continue         
 
             # signals
             ax = window["Accelerometer_X"].values
             ay = window["Accelerometer_Y"].values
             az = window["Accelerometer_Z"].values
+
+            hrv = window['HRV'].values
 
             mag = np.sqrt(ax**2 + ay**2 + az**2)
 
@@ -57,7 +62,19 @@ def create_windows(df, window_size, step_size):
                 "az_std": az.std(),
 
                 "mag_mean": mag.mean(),
-                "mag_std": mag.std()
+                "mag_std": mag.std(),
+
+                # Axis relationships (orientation indicators)
+                "mean_ratio_xy": ax.mean() / (ay.mean() + 1e-6),
+                "mean_ratio_xz": ax.mean() / (az.mean() + 1e-6),
+                "mean_ratio_yz": ay.mean() / (az.mean() + 1e-6),
+                
+                "std_ratio_xy": ax.std() / (ay.std() + 1e-6),
+                "std_ratio_xz": ax.std() / (az.std() + 1e-6),
+                "std_ratio_yz": ay.std() / (az.std() + 1e-6),
+
+                "HRV" : hrv.mean(),
+                "HRV_std" : hrv.std()
 
             
               
@@ -87,7 +104,7 @@ users_to_remove = [19, 20, 21, 22]
 data = pd.read_csv('physiological_with_activity_labels.csv')
 
 data = data.dropna()
-data = data[data['activity_label'] != 'moderate_activity']
+#data = data[data['activity_label'] != 'moderate_activity']
 data = data[data['activity_label'] != 'light_activity']
 data = data.dropna(subset=["activity_label"])
 
@@ -95,7 +112,10 @@ data = data.dropna(subset=["activity_label"])
 label_mapping = {
     'stand' : 'standing',
     'sit' : 'sitting',
-    'lying' : 'lying'
+    'lying' : 'lying',
+    'moderate_activity' : 'moderate_activity',
+
+
   
 }
 
@@ -104,13 +124,15 @@ data['activity_label'] = data['activity_label'].map(label_mapping)
 # Window data to take a feature extraction
 
 window_size = 500
-step_size = window_size // 2
+step_size = 100
 
 X_win, y_win, groups_win = create_windows(
     data,
     window_size,
     step_size=step_size
 )
+
+
 
 print(pd.Series(y_win).value_counts())
 
@@ -121,6 +143,7 @@ gss = GroupShuffleSplit(n_splits=1, test_size=0.2, random_state=42)
 # Get train and test indices
 train_idx, test_idx = next(gss.split(X_win, y_win, groups_win))
 
+
 # Split data
 X_train, X_test = X_win.iloc[train_idx], X_win.iloc[test_idx]
 y_train, y_test = y_win.iloc[train_idx], y_win.iloc[test_idx]
@@ -129,8 +152,28 @@ groups_test = groups_win.iloc[test_idx]
 y_train = y_train.values.ravel()
 y_test = y_test.values.ravel()
 
+
+class_counts = Counter(y_train)
+
+total = sum(class_counts.values())  
+
+le = LabelEncoder()#
+
+class_weight_dict = {}
+
+#for cls, count in class_counts.items():
+    
+   # if cls == 'standing':
+       # class_weight_dict[cls] = (total / (len(class_counts) * count)) * 7.0
+  #  elif cls == 'lying':
+    #    class_weight_dict[cls] = (total / (len(class_counts) * count)) * 2.0
+  #  elif cls == 'moderate_activity':
+   #     class_weight_dict[cls] = (total / (len(class_counts) * count)) *7.0  
+   # else: 
+   #     class_weight_dict[cls] = total / (len(class_counts) * count)
+
 # Random Forest classifier
-clf = RandomForestClassifier(n_estimators=300,  max_features="sqrt", max_depth=30,  min_samples_leaf=5, min_samples_split=10, class_weight="balanced",  n_jobs=-1)
+clf = RandomForestClassifier(n_estimators=500,  max_features="sqrt", max_depth=30,  min_samples_leaf=5, min_samples_split=10,  n_jobs=-1)
 clf.fit(X_train, y_train)
 y_pred = clf.predict(X_test)
 
@@ -155,6 +198,8 @@ feature_importance = pd.DataFrame({
 print("\nMost Important Features:")
 print(feature_importance)
 
+
+
 # Hyperparameter tuning
 ##param_grid = {
   #  'n_estimators' : [200, 300, 400],
@@ -168,6 +213,4 @@ print(feature_importance)
 
 #print("Best Parameters:", grid_search.best_params_)
 #print("Best Estimator:", grid_search.best_estimator_)
-
-
 
